@@ -11,9 +11,10 @@ var el = document.createElement('p');
 var style;
 
 for (var i = 0; i < styles.length; i++) {
-  style = styles[i];
-  if (null != el.style[style]) {
-    module.exports = style;
+  if (null != el.style[styles[i]]) {
+    style = styles[i];
     break;
   }
 }
+
+module.exports = style;
